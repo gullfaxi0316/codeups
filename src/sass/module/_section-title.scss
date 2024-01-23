@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.section-title{
+  font-size: rem(32);
+  font-family: $third-font-family;
+  line-height: rem(40);
+  text-align: center;
+
+  @include mq("md") {
+    font-size: rem(40);
+  }}
+
+.title__subtitle{
+  padding-bottom: rem(24);
+}
+
+.title_blue{
+  color: $blue;
+}
+
+.title_blue2{
+  color: #408F95;
+
+  @include mq("md") {
+    color: #DDF0F1;
+  }}

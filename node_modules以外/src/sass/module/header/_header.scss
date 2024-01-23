@@ -1,0 +1,80 @@
+@use "global" as *;
+
+header{
+  position: absolute;
+  width: 100%;
+  background-color: rgba(13, 41, 54, .68);
+  z-index: 2;
+}
+
+header.fixed{
+  background-color: #9A9A9A;
+}
+
+.header__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mq("md") {
+    padding-left: rem(40);
+  }}
+
+.header__logo{
+  padding: rem(21) 0 rem(21)  rem(15);
+
+@include mq("md") {
+  padding: rem(20) 0 rem(20)  0;
+}}
+
+.header__logo-image{
+  width: rem(102);
+
+  @include mq("md") {
+    width: rem(133);
+  }}
+
+.navigation{
+  margin-right: 0;
+
+@include mq("md") {
+  margin-right: rem(41);
+}}
+
+.navigation__en{
+  font-size: rem(18);
+  line-height: rem(18);
+}
+
+.navigation__jp{
+  font-size: rem(10);
+  line-height: rem(15);
+  margin-top: rem(8);
+}
+
+@include mq("md") {
+.header__navigation-link{
+  display: inline-block;
+  padding-top: rem(23);
+  padding-bottom: rem(26);
+  text-align: center;
+}}
+
+header.fixed .header__navigation-link{
+  padding-top: rem(58);
+  padding-bottom: rem(61);
+}
+
+.header__navigations{
+  display: none;
+
+@include mq("md") {
+  display: flex;
+}}
+
+header.fixed{
+	position: fixed;/*fixedを設定して固定*/
+  z-index: 999;/*最前面へ*/
+  top:0;/*位置指定*/
+  left:0;/*位置指定*/
+}

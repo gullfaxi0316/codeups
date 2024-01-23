@@ -1,0 +1,64 @@
+@use "global" as *;
+
+.button{
+  position: relative;
+  left: rem(0);
+  width: rem(202);
+  height: rem(54);
+  display: block;
+  background-color: $blue;
+  font-size: rem(14);
+  font-family: $third-font-family;
+  line-height: rem(22);
+  color: #fff;
+  padding: rem(14) rem(40);
+  text-align: left;
+  border: solid rem(1) $blue;
+  transition: all .1s .1s ease-out;
+  z-index: 2;
+}
+
+.button:hover{
+  color: $blue;
+  background-color: #fff;
+}
+
+.button-box{
+  left: rem(-2);
+  width: rem(202);
+  height: rem(54);
+  margin:  0 auto;
+  position: relative;
+}
+
+.button-box:before{
+  content: "";
+  position: absolute;
+  bottom: rem(-4);
+  right: rem(-4);
+  width: rem(202);
+  height: rem(54);
+  border: solid rem(1) $blue;
+  z-index: 1;
+}
+
+.button-box:after{
+  content: "";
+  position: absolute;
+  bottom: rem(24);
+  right: rem(40);
+  width: rem(40);
+  height: rem(10);
+  background-image: url(../images/top-page/arrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  // transition: all .1s .1s ease-in-out;
+
+@include mq("md") {
+  bottom: rem(24);
+}}
+
+.button-box:hover:after{
+  background-image: url(../images/top-page/arrow_hover.png);
+}

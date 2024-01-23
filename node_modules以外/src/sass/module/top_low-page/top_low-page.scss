@@ -1,0 +1,140 @@
+@use "global" as *;
+
+#top_low-page{
+  position: relative;
+  width: 100%;
+  height: rem(450);
+  background-position: right 35% bottom 45%;
+  background-size: cover;
+  background-image: url(../images/campaign/campaign-top.png);
+
+  @include mq("md") {
+  height: rem(550);
+  }}
+
+.top-low-page__inner{
+    top: 62%!important;
+  }
+
+.campaign-page__cards{
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-left: 0;
+  font-size: rem(14);
+  font-weight: 700;
+  gap: rem(40);
+
+  @include mq("md") {
+    grid-template-columns: 1fr 1fr;
+}}
+
+.campaign-page__card{
+  box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, .25)!important;
+  margin-right: 0;
+  margin-bottom: rem(35);
+
+  @include mq("md") {
+    margin-bottom: rem(45);
+}}
+
+.campaign-page-price__old{
+  padding-left: rem(18);
+}
+
+.campaign-page-price__new{
+  padding-left: rem(42);
+}
+
+.campaign-page-card__campaign-price-box{
+  padding-left: 0;
+  padding-right: 0;
+  width: 68%;
+  margin: 0 auto;
+}
+
+.campaign-card__word{
+  padding: rem(17) rem(16) rem(20);
+}
+
+.top-low-page__inner{
+  letter-spacing: 0;
+}
+
+  @include mq("md") {
+    .campaign-page__inner{
+    width: 75%;
+    margin: rem(150) auto 0;
+}}
+
+.top-low-page__title{
+  letter-spacing: 0!important;
+}
+
+.link__items{
+  display: grid;
+
+
+  @include mq("md") {
+    margin-bottom: rem(40);
+}}
+
+.link__item{
+  padding-top: rem(6);
+  padding-bottom: rem(6);
+}
+
+.campaign-page-card__word{
+  padding: rem(24) rem(24);
+
+  @include mq("md") {
+    padding: rem(24) rem(24) rem(38);
+  }}
+
+@include mq("md") {
+.campaign-page-card__title{
+  font-size: rem(24);
+  padding-top: rem(12);
+}}
+
+.campaign-page__sentence{
+  padding-top: rem(26);
+  padding-bottom: rem(5);
+}
+
+.campaign-page__text{
+  line-height: rem(24);
+  font-size: rem(16);
+  padding-top: rem(20);
+}
+
+.campaign-page__date{
+  text-align: center;
+  display: none;
+
+  @include mq("md") {
+    padding-top: rem(30);
+    display: block;
+  }}
+
+  .campaign-page__button{
+    margin-top: rem(44);
+  }
+
+  .campaign-page__button2{
+    margin-top: rem(22);
+  }
+
+// link
+.link__items{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @include mq("md") {
+    grid-template-columns: rem(162) rem(162) rem(162) rem(162);;
+    gap: rem(32);
+  }}
+
+.link__item{
+  border: solid rem(1) $blue;
+  text-align: center;
+}

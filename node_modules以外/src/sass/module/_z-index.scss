@@ -1,0 +1,13 @@
+@use "global" as *;
+
+header{
+  z-index: 1;
+}
+
+.screen.active{
+  z-index: 8;
+}
+
+header.active{
+  z-index: 9;
+}

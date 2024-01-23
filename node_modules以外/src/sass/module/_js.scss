@@ -1,0 +1,16 @@
+@use "global" as *;
+
+// フェードイン前
+.js-fade {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: opacity 1s,visibility 1s, transform 1s;
+}
+
+// フェードイン後
+.inview {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
