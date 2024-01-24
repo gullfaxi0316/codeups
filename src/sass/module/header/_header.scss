@@ -11,6 +11,28 @@ header.fixed{
   background-color: #9A9A9A;
 }
 
+.header__navigation-link{
+  position: relative;
+}
+
+.header__navigation-link:after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: rem(1);
+  background-color: #fff;
+  left: 0;
+  bottom: rem(15);
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform 0.3s;
+}
+
+.header__navigation-link:hover:after{
+  transform: scale(1, 1);
+}
+
 .header__inner{
   display: flex;
   justify-content: space-between;

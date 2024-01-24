@@ -6,7 +6,7 @@
 
 .about__inner{
   padding: rem(10) 0 rem(74);
-  max-width: rem(345);
+  max-width: rem(600);
   margin: 0 auto;
   position: relative;
 
@@ -50,8 +50,8 @@
   position: absolute;
   top: rem(-26);
   left: 0;
-  width: rem(128);
-  height: rem(194);
+  width: 100%;
+  height: 100%;
   background-image: url(../images/top-page/about/about1.png);
   background-size: cover;
 

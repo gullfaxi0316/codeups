@@ -1,64 +1,91 @@
 @use "global" as *;
 
-.button{
-  position: relative;
-  left: rem(0);
-  width: rem(202);
-  height: rem(54);
-  display: block;
-  background-color: $blue;
-  font-size: rem(14);
-  font-family: $third-font-family;
-  line-height: rem(22);
-  color: #fff;
-  padding: rem(14) rem(40);
-  text-align: left;
-  border: solid rem(1) $blue;
-  transition: all .1s .1s ease-out;
-  z-index: 2;
-}
-
-.button:hover{
-  color: $blue;
-  background-color: #fff;
-}
-
 .button-box{
-  left: rem(-2);
-  width: rem(202);
-  height: rem(54);
-  margin:  0 auto;
-  position: relative;
+  text-align: center;
 }
 
-.button-box:before{
-  content: "";
-  position: absolute;
-  bottom: rem(-4);
-  right: rem(-4);
-  width: rem(202);
-  height: rem(54);
-  border: solid rem(1) $blue;
+.campaign__button{
+  position: relative;
+  z-index: 5;
+}
+
+.common-button {
+  background: #408F95;
+  border: 1px solid #408F95;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1;
+  padding: 1.1875rem 5.5rem 1.1875rem 2.5rem;
+  position: relative;
+  transition: ease 0.3s;
   z-index: 1;
 }
 
-.button-box:after{
+.common-button:hover::before {
+  transform: scale(1, 1);
+}
+
+.common-button::before {
+  background: #fff;
   content: "";
+  height: 100%;
+  left: 0;
   position: absolute;
-  bottom: rem(24);
-  right: rem(40);
-  width: rem(40);
-  height: rem(10);
-  background-image: url(../images/top-page/arrow.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: 5;
-  // transition: all .1s .1s ease-in-out;
+  top: 0;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+  width: 100%;
+  z-index: -1;
+}
 
-@include mq("md") {
-  bottom: rem(24);
-}}
+.common-button::after {
+  border: solid 1px #408F95;
+  bottom: -0.25rem;
+  content: "";
+  left: 0.25rem;
+  position: absolute;
+  right: -0.25rem;
+  top: 0.25rem;
+  z-index: -2;
+}
 
-.button-box:hover:after{
-  background-image: url(../images/top-page/arrow_hover.png);
+.common-button:hover {
+  color: #408F95;
+}
+
+.common-button span {
+  display: block;
+}
+
+.common-button span::before {
+  background: #fff;
+  border-radius: 0.0625rem;
+  bottom: 1.5rem;
+  content: "";
+  display: block;
+  height: 0.0625rem;
+  left: 7.625rem;
+  position: absolute;
+  width: 2.5rem;
+}
+
+.common-button:hover span::before, .common-button:hover span::after {
+  background: #408F95;
+}
+
+.common-button span::after {
+  background: #fff;
+  border-radius: 0.0625rem;
+  bottom: 1.6875rem;
+  content: "";
+  display: block;
+  height: 0.0625rem;
+  position: absolute;
+  right: 2.375rem;
+  transform: rotate(42deg);
+  width: 0.625rem;
 }
