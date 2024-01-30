@@ -1,0 +1,68 @@
+@use "global" as *;
+
+.swiper-slide{
+  // height: auto!important;
+  box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, .2)
+}
+
+.swiper__image{
+  height: 100vh;
+  object-fit: cover;
+}
+
+// .swiper-slide img {
+//   height: auto;
+//   width: 100%;
+// }
+
+// @include mq("md") {
+// .swiper{
+//   padding-bottom: rem(10)!important;
+// }}
+
+.swiper-button-prev{
+  position: absolute;
+  display: none;
+  width: rem(80)!important;
+  height: rem(80)!important;
+  background-image: url(../images/top-page/campaign/arrow_left.png);
+  background-size: cover;
+
+  @include mq("md") {
+    width: rem(80)!important;
+    height: rem(80)!important;
+    top: rem(-84)!important;
+    right: rem(315)!important;
+    left: auto!important;
+}}
+
+.swiper-button-next{
+  display: none;
+  width: rem(80)!important;
+  height: rem(80)!important;
+
+  @include mq("md") {
+  top: rem(-84)!important;
+  right: rem(154)!important;
+  left: auto!important;
+}}
+
+.swiper-button-next, .swiper-button-prev{
+  color: transparent!important;
+}
+
+.swiper-button-next:after{
+  content: "";
+  position: absolute;
+  width: rem(80);
+  height: rem(80);
+  background-image: url(../images/top-page/campaign/arrow_right.png);
+  background-size: cover;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  display: none!important;
+
+  @include mq("md") {
+    display: block!important;
+  }}

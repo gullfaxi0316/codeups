@@ -1,0 +1,63 @@
+@use "global" as *;
+
+.screen {
+    display: none;
+}
+
+#top{
+    margin-bottom: rem(40);
+    height: 100vh;
+
+    @include mq("md") {
+        margin-bottom: rem(0);
+        }}
+
+#campaign{
+    margin-bottom: rem(84);
+    overflow: hidden;
+
+    @include mq("md") {
+        margin-bottom: rem(138);
+
+        }}
+
+#price{
+    background-color: #DDF0F1;
+}   
+
+#about{
+    position: relative;
+  }
+
+  #about{
+    margin-bottom: rem(74);
+  
+  @include mq("md") {
+    margin-bottom: rem(370);
+  }}
+
+#contact{
+    position: relative;
+    margin-top: rem(80);
+    margin-bottom: rem(104);
+    
+    @include mq("md") {
+      margin-top: rem(140);
+      margin-bottom: rem(160);
+    }}
+
+    footer{
+        background-color: $blue;
+      }
+
+      #top{
+        position: relative;
+        width: 100%;
+      }
+
+#voice{
+    margin: 0 auto rem(84);
+    
+    @include mq("md") {
+        margin: 0 auto rem(145);
+    }}

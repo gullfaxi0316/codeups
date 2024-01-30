@@ -1,0 +1,228 @@
+@use "global" as *;
+
+.campaign__inner{
+  max-width: rem(600)!important;
+
+  @include mq("md") {
+    position: relative;
+    max-width: calc(rem(1130) + (100vw - rem(1130)) / 2)!important;
+    margin-right: 0;
+  }}
+
+.campaign__title{
+  text-align: center;
+  font-size: rem(32);
+  font-family: $second-font-family;
+  line-height: 1.25;
+
+@include mq("md") {
+  padding-top: rem(115);
+  margin: 0 auto;
+  font-size: rem(40);
+}}
+
+.subtitle{
+  font-size: rem(12);
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center
+}
+
+.section-title__subtitle{
+  margin-bottom: rem(27);
+
+  @include mq("md") {
+  margin-bottom: rem(75);
+}}
+
+.campaign__subtitle{
+  color: $blue;
+  margin-bottom: rem(25);
+
+  @include mq("md") {
+    margin-bottom: rem(39);
+}}
+
+.campaign-price__old{
+  position: relative;
+  font-size: rem(20);
+  line-height: 1;
+  font-family: $forth-font-family;
+  margin-left: rem(20);
+
+@include mq("md") {
+  font-size: rem(24);
+  margin-left: 0;
+}}
+
+.campaign-price__old:after{
+  content: "";
+  position: absolute;
+  border-bottom: solid rem(3) #C94800;
+  top: 50%;
+  left: rem(4);
+  width: rem(78);
+  height: rem(3);
+
+  @include mq("md") {
+    top: 44%;
+    left: rem(8);
+  }}
+
+.campaign-price__new{
+  color: $blue;
+  padding-left:rem(15);
+  font-size: rem(32);
+  line-height: 1;
+  font-family: $forth-font-family;
+
+@include mq("md") {
+  font-size: rem(40);
+  padding-top: rem(5);
+  padding-left: rem(24);
+}}
+
+.campaign__sentence{
+  padding-bottom: rem(10);
+  text-align: center;
+
+  @include mq("md") {
+    padding-top: rem(14);
+    padding-left: 0;
+    font-size: rem(16);
+    font-weight: 700;
+}}
+
+.campaign__cards{
+  padding-left: 0;
+  font-size: rem(14);
+  font-weight: 700;
+
+  @include mq("md") {
+
+}}
+
+.swiper2{
+  position: relative!important;
+}
+
+.campaign__cards{
+  width: 100%;
+  position: relative;
+}
+
+// .campaign__card{
+//   width: rem(280)!important;
+//   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, .25)!important;
+
+//   @include mq("md") {
+//     width: rem(333)!important;
+// }}
+
+// .campaign__swiper2{
+//   @include mq("md") {
+//     margin-right: calc(50% - 50vw);
+//     margin-left: rem(10);
+//   }}
+
+// .campaign__area{
+//   margin-right: -200px;
+// }
+
+.campaign__area{
+  margin-bottom: rem(37);
+
+  @include mq("md") {
+    margin-bottom: rem(78);
+  }}
+
+  .card__image{
+    aspect-ratio: 333 /223;
+    object-fit: cover;
+  }
+
+.section-subtitle{
+  color: $blue;
+  font-size: rem(12);
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.5;
+
+@include mq("md") {
+  color: #fff
+}}
+
+// .campaign__button{
+//   margin: 0 auto;
+// }
+
+.card__campaign-price-box{
+  // margin: rem(8) rem(18) 0;
+
+  @include mq("md") {
+    margin-top: rem(0);
+    text-align: center;
+  }}
+
+  .card__title{
+    margin-top: rem(6);
+    padding-bottom: rem(8);
+    position: relative;
+    font-size: rem(16);
+    text-align: left;
+  }
+  
+  .card__title:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: $blue;
+    border: solid rem(1) $blue;
+  }
+
+.card__title_campaign{
+  font-family: "Noto Sans JP", sans;
+  font-size: rem(16);
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: rem(10);
+
+  @include mq("md") {
+    margin-top: rem(5);
+    margin-bottom: rem(0);
+  }}
+
+.card__word{
+  font-family: $second-font-family;
+  margin: rem(17) rem(16) rem(24);
+
+@include mq("md") {
+  margin: rem(24) rem(16) rem(40);
+}}
+
+.card__tag-h3{
+  font-size: rem(12);
+}
+
+ .campaign h2{
+  font-size: rem(16);
+ }
+
+ .card__image{
+  // aspect-ratio: 333 / 223;
+  // object-fit: cover;
+  width: 100%;
+  height: auto;
+ }
+
+ .campaign__card{
+  height: auto!important;
+ }
+
+//  .campaign__card{
+//   width: 17.5rem!important;
+ 
+//   @include mq("md") {
+//     width: 20.8125rem!important
+//   }}

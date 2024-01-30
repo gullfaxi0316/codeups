@@ -1,0 +1,90 @@
+@use "global" as *;
+
+.loading {
+    width: 100%;
+    height: 100vh;
+    transition: all 1s;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+  }
+  
+  .loading__lead {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: $blue;
+      z-index: 9999;
+      font-weight: $normal;
+  
+      @include mq('md') {
+          transform: translate(-50%, -50%);
+      }
+  }
+  
+  .loading__title {
+      font-size: rem(40);
+      font-family: 'Lato', sans-serif;
+      letter-spacing: 0.54em;
+      margin-right: -0.54em;
+      line-height: 1.25;
+  
+      @include mq('md') {
+          font-size: rem(80);
+          line-height: 1.1;
+      }
+  }
+  
+  .loading__subtitle {
+      font-size: rem(20);
+      font-family: $second-font-family;
+      line-height: 1.65;
+  }
+  
+  .loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .loading__image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 9000;
+  }
+  
+  .half {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      background-size: cover;
+      transform: translateY(100%); /* 初期状態は下に隠れている状態 */
+      transition: transform 1.5s ease-in-out;
+  }
+  
+  .left-half {
+      left: 0;
+      background: url('../images/top-page/loading/loading-left_sp.png') no-repeat center right / cover; /* 1枚の画像のパスを指定してください */
+      width: 50%;
+  
+      @include mq('md') {
+        background: url('../images/top-page/loading/loading-left.png') no-repeat center right / cover; /* 1枚の画像のパスを指定してください */
+    }}
+  
+  .right-half {
+      right: 0;
+      background: url('../images/top-page/loading/loading-right_sp.png') no-repeat center left / cover; /* 1枚の画像のパスを指定してください */
+      width: 50%;
+  
+      @include mq('md') {
+        background: url('../images/top-page/loading/loading-right.png') no-repeat center left / cover; /* 1枚の画像のパスを指定してください */
+    }}
+  
+  .maincontent {
+      display: none;
+      // opacity: 0;
+  }

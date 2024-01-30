@@ -3,12 +3,16 @@
 .section-title{
   font-size: rem(32);
   font-family: $third-font-family;
-  line-height: rem(40);
+  line-height: 1.25;
   text-align: center;
 
   @include mq("md") {
     font-size: rem(40);
   }}
+
+// .subtitle {
+//   font-family: $second-font-family;
+// }
 
 .title__subtitle{
   padding-bottom: rem(24);
@@ -23,4 +27,13 @@
 
   @include mq("md") {
     color: #DDF0F1;
+  }}
+
+.section-title__h2{
+  font-size: rem(32);
+  margin-bottom: rem(5);
+
+  @include mq("md") {
+    font-size: rem(40);
+    color: #0D2936;
   }}
